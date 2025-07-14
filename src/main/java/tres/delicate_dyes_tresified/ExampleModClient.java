@@ -1,4 +1,4 @@
-package tres.delicateDyesTresified;
+package tres.delicate_dyes_tresified;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;

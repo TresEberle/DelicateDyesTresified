@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "delicate_dyes_tresified:item/sacramento_dye"
+  }
+}

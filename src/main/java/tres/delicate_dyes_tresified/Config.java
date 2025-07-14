@@ -1,4 +1,4 @@
-package tres.delicateDyesTresified;
+package tres.delicate_dyes_tresified;
 
 import java.util.List;
 
