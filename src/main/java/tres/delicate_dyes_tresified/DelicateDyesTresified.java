@@ -14,6 +14,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import tres.delicate_dyes_tresified.block.ModBlocks;
 import tres.delicate_dyes_tresified.item.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -33,6 +34,7 @@ public class DelicateDyesTresified {
 		NeoForge.EVENT_BUS.register(this);
 
 		ModItems.register(modEventBus);
+		ModBlocks.register(modEventBus);
 
 		// Register the item to a creative tab
 		modEventBus.addListener(this::addCreative);
@@ -44,12 +46,17 @@ public class DelicateDyesTresified {
 	private void commonSetup(FMLCommonSetupEvent event) {
 
 	}
-
+	// C:\Users\Tres\IdeaProjects\DelicateDyesTresified\src\main\resources\assets\delicate_dyes_tresified
 	// Add the example block item to the building blocks tab
 	private void addCreative(BuildCreativeModeTabContentsEvent event) {
 		if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			event.accept(ModItems.SACRAMENTO_DYE);
 			event.accept(ModItems.CANARY_DYE);
+		}
+
+		if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+			event.accept(ModBlocks.SACRAMENTO_WOOL);
+			event.accept(ModBlocks.CANARY_WOOL);
 		}
 	}
 
