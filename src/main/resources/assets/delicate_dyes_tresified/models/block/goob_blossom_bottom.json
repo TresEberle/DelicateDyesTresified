@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "delicate_dyes:block/goob_blossom_bottom"
+  }
+}

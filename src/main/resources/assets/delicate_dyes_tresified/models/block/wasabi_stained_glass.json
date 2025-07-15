@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "delicate_dyes:block/wasabi_stained_glass"
+  }
+}

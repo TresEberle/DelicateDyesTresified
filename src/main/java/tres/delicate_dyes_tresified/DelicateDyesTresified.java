@@ -15,6 +15,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import tres.delicate_dyes_tresified.block.ModBlocks;
+import tres.delicate_dyes_tresified.item.ModCreativeModTabs;
 import tres.delicate_dyes_tresified.item.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -26,12 +27,14 @@ public class DelicateDyesTresified {
 	// The constructor for the mod class is the first code that is run when your mod is loaded.
 	// FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
 	public DelicateDyesTresified(IEventBus modEventBus, ModContainer modContainer) {
-		// Register the commonSetup method for modloading
+		// Register the commonSetup method for mod loading
 		modEventBus.addListener(this::commonSetup);
 		// Register ourselves for server and other game events we are interested in.
 		// Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
 		// Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
 		NeoForge.EVENT_BUS.register(this);
+
+		ModCreativeModTabs.register(modEventBus);
 
 		ModItems.register(modEventBus);
 		ModBlocks.register(modEventBus);
@@ -49,15 +52,7 @@ public class DelicateDyesTresified {
 	// C:\Users\Tres\IdeaProjects\DelicateDyesTresified\src\main\resources\assets\delicate_dyes_tresified
 	// Add the example block item to the building blocks tab
 	private void addCreative(BuildCreativeModeTabContentsEvent event) {
-		if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-			event.accept(ModItems.SACRAMENTO_DYE);
-			event.accept(ModItems.CANARY_DYE);
-		}
 
-		if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-			event.accept(ModBlocks.SACRAMENTO_WOOL);
-			event.accept(ModBlocks.CANARY_WOOL);
-		}
 	}
 
 	// You can use SubscribeEvent and let the Event Bus discover methods to call

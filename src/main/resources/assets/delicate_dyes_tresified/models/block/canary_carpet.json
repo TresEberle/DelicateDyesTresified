@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "delicate_dyes:block/canary_wool"
+  }
+}

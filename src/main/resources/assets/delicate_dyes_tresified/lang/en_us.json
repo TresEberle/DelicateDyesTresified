@@ -1,7 +1,16 @@
 {
+  "creativetab.delicate_dyes_tresified.delicate_dyes_tresified": "Delicate Dyes",
+
   "item.delicate_dyes_tresified.sacramento_dye": "Sacramento Dye",
   "item.delicate_dyes_tresified.canary_dye": "Canary Dye",
 
+  "block.delicate_dyes_tresified.blurple_wool": "Blurple Wool",
+  "block.delicate_dyes_tresified.canary_wool": "Canary Wool",
+  "block.delicate_dyes_tresified.coral_wool": "Coral Wool",
+  "block.delicate_dyes_tresified.rose_wool": "Rose Wool",
   "block.delicate_dyes_tresified.sacramento_wool": "Sacramento Wool",
-  "block.delicate_dyes_tresified.canary_wool": "Canary Wool"
+  "block.delicate_dyes_tresified.sangria_wool": "Sangria Wool",
+  "block.delicate_dyes_tresified.sky_wool": "Sky Wool",
+  "block.delicate_dyes_tresified.wasabi_wool": "Wasabi Wool"
+
 }

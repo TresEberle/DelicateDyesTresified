@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_glazed_terracotta",
+  "textures": {
+    "pattern": "delicate_dyes:block/canary_glazed_terracotta"
+  }
+}

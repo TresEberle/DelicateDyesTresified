@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "delicate_dyes:block/sky_stained_glass_pane_top",
+    "pane": "delicate_dyes:block/sky_stained_glass"
+  }
+}

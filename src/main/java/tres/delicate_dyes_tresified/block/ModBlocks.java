@@ -19,11 +19,32 @@ public class ModBlocks {
 	public static final DeferredRegister.Blocks BLOCKS =
 			DeferredRegister.createBlocks(DelicateDyesTresified.MOD_ID);
 
-	public static final DeferredBlock<Block> SACRAMENTO_WOOL = registerBlock("sacramento_wool",
+	public static final DeferredBlock<Block> BLURPLE_WOOL = registerBlock("blurple_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
 	public static final DeferredBlock<Block> CANARY_WOOL = registerBlock("canary_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+	public static final DeferredBlock<Block> CORAL_WOOL = registerBlock("coral_wool",
+			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+	public static final DeferredBlock<Block> ROSE_WOOL = registerBlock("rose_wool",
+			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+	public static final DeferredBlock<Block> SACRAMENTO_WOOL = registerBlock("sacramento_wool",
+			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+	public static final DeferredBlock<Block> SANGRIA_WOOL = registerBlock("sangria_wool",
+			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+	public static final DeferredBlock<Block> SKY_WOOL = registerBlock("sky_wool",
+			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+	public static final DeferredBlock<Block> WASABI_WOOL = registerBlock("wasabi_wool",
+			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
+
+
+
 
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
 		DeferredBlock<T> toReturn = BLOCKS.register(name, block);
