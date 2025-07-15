@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "delicate_dyes:block/sacramento_concrete_powder"
+    "all": "delicate_dyes_tresified:block/sacramento_concrete_powder"
   }
 }

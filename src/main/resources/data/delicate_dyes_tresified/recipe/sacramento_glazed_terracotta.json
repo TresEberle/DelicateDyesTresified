@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "delicate_dyes_tresified:sacramento_terracotta"
+  },
+  "result": {
+    "id": "delicate_dyes_tresified:sacramento_glazed_terracotta"
+  }
+}

@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "category": "building",
+  "group": "wool",
   "ingredients": [
     {
       "item": "delicate_dyes_tresified:canary_dye"
