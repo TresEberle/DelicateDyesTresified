@@ -32,6 +32,7 @@ public class ModCreativeModTabs {
 						output.accept(ModBlocks.SACRAMENTO_WOOL);
 						output.accept(ModBlocks.SACRAMENTO_CARPET);
 						output.accept(ModBlocks.SACRAMENTO_CONCRETE);
+						output.accept(ModBlocks.SACRAMENTO_TERRACOTTA);
 						output.accept(ModBlocks.SACRAMENTO_CONCRETE_POWDER);
 						output.accept(ModBlocks.SACRAMENTO_GLAZED_TERRACOTTA);
 						output.accept(ModBlocks.SACRAMENTO_STAINED_GLASS);

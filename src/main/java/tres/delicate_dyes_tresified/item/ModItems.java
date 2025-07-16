@@ -13,7 +13,7 @@ public class ModItems {
 			DeferredRegister.createItems(DelicateDyesTresified.MOD_ID);
 
 	public static final DeferredItem<Item> SACRAMENTO_DYE =
-			ITEMS.register("sacramento_dye", () -> new ColoredDyeItem(new Item.Properties()));
+			ITEMS.register("sacramento_dye", () -> new Item(new Item.Properties()));
 
 	public static final DeferredItem<Item> CANARY_DYE =
 			ITEMS.register("canary_dye", () -> new Item(new Item.Properties()));
