@@ -1,19 +1,8 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta"
-    },
-    "facing=south": {
-      "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta",
-      "y": 270
-    }
+    "facing=north":  { "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta" },
+    "facing=east":   { "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta", "y": 90 },
+    "facing=south":  { "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta", "y": 180 },
+    "facing=west":   { "model": "delicate_dyes_tresified:block/sacramento_glazed_terracotta", "y": 270 }
   }
 }

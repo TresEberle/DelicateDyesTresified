@@ -1,11 +1,9 @@
 package tres.delicate_dyes_tresified.block;
 
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.ConcretePowderBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -14,6 +12,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import tres.delicate_dyes_tresified.DelicateDyesTresified;
 import tres.delicate_dyes_tresified.item.ModItems;
+import tres.delicate_dyes_tresified.item.custom.ColoredDyeItem;
 
 import java.util.function.Supplier;
 
@@ -33,20 +32,31 @@ public class ModBlocks {
 	public static final DeferredBlock<Block> ROSE_WOOL = registerBlock("rose_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
+
+
 	public static final DeferredBlock<Block> SACRAMENTO_WOOL = registerBlock("sacramento_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
-	public static final DeferredBlock<Block> SACRAMENTO_CONCRETE = registerBlock("sacramento_concrete",
-			() -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
-
-	public static final DeferredBlock<Block> SACRAMENTO_CONCRETE_POWDER = registerBlock("sacramento_concrete_powder",
-			() -> new ConcretePowderBlock(SACRAMENTO_CONCRETE.get(),BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE_POWDER)));
+	public static final DeferredBlock<WoolCarpetBlock> SACRAMENTO_CARPET = registerBlock("sacramento_carpet",
+			() -> new WoolCarpetBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CARPET )));
 
 	public static final DeferredBlock<Block> SACRAMENTO_TERRACOTTA = registerBlock("sacramento_terracotta",
 			() -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_TERRACOTTA)));
 
-	public static final DeferredBlock<Block> SACRAMENTO_GLAZED_TERRACOTTA = registerBlock("sacramento_glazed_terracotta",
-			() -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_GLAZED_TERRACOTTA)));
+	public static final DeferredBlock<Block> SACRAMENTO_CONCRETE = registerBlock("sacramento_concrete",
+			() -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
+
+	public static final DeferredBlock<ConcretePowderBlock> SACRAMENTO_CONCRETE_POWDER = registerBlock("sacramento_concrete_powder",
+			() -> new ConcretePowderBlock(SACRAMENTO_CONCRETE.get(),BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE_POWDER)));
+
+	public static final DeferredBlock<GlazedTerracottaBlock> SACRAMENTO_GLAZED_TERRACOTTA = registerBlock("sacramento_glazed_terracotta",
+			() -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_GLAZED_TERRACOTTA)));
+
+	public static final DeferredBlock<StainedGlassBlock> SACRAMENTO_STAINED_GLASS = registerBlock("sacramento_stained_glass",
+			() -> new StainedGlassBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS )));
+
+
+
 
 	public static final DeferredBlock<Block> SANGRIA_WOOL = registerBlock("sangria_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));

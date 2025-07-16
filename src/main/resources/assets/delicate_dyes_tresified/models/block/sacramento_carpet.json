@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/carpet",
   "textures": {
-    "wool": "delicate_dyes:block/sacramento_wool"
+    "wool": "delicate_dyes_tresified:block/sacramento_wool"
   }
 }
