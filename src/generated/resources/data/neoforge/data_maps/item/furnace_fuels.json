@@ -1,0 +1,28 @@
+{
+  "values": {
+    "delicate_dyes_tresified:blurple_wool": {
+      "burn_time": 100
+    },
+    "delicate_dyes_tresified:canary_wool": {
+      "burn_time": 100
+    },
+    "delicate_dyes_tresified:coral_wool": {
+      "burn_time": 100
+    },
+    "delicate_dyes_tresified:rose_wool": {
+      "burn_time": 100
+    },
+    "delicate_dyes_tresified:sacramento_wool": {
+      "burn_time": 100
+    },
+    "delicate_dyes_tresified:sangria_wool": {
+      "burn_time": 100
+    },
+    "delicate_dyes_tresified:sky_wool": {
+      "burn_time": 100
+    },
+    "delicate_dyes_tresified:wasabi_wool": {
+      "burn_time": 100
+    }
+  }
+}

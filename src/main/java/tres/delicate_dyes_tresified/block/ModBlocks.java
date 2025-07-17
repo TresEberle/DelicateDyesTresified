@@ -55,9 +55,6 @@ public class ModBlocks {
 	public static final DeferredBlock<StainedGlassBlock> SACRAMENTO_STAINED_GLASS = registerBlock("sacramento_stained_glass",
 			() -> new StainedGlassBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS )));
 
-
-
-
 	public static final DeferredBlock<Block> SANGRIA_WOOL = registerBlock("sangria_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 

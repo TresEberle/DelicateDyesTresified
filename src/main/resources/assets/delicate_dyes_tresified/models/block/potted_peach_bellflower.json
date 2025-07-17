@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/flower_pot_cross",
-  "textures": {
-    "plant": "delicate_dyes:block/peach_bellflower"
-  }
-}

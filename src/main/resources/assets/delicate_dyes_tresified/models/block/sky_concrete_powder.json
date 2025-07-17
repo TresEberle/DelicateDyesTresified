@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "delicate_dyes:block/sky_concrete_powder"
-  }
-}

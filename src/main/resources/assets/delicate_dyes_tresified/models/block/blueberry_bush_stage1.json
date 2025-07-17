@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "delicate_dyes:block/blueberry_bush_stage1"
-  }
-}

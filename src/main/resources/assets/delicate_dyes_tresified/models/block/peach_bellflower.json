@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "delicate_dyes:block/peach_bellflower"
-  }
-}

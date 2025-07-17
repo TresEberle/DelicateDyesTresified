@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_noside_alt",
-  "textures": {
-    "pane": "delicate_dyes:block/blurple_stained_glass"
-  }
-}
