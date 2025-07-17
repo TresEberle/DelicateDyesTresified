@@ -19,6 +19,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.@NotNull Provider provider) {
+//		tag(BlockTags.MINEABLE_WITH_PICKAXE)
+//			.add(ModBlocks.SACRAMENTO_TERRACOTTA.get())
+//			.add(ModBlocks.SACRAMENTO_CONCRETE.get())
+//			.add(ModBlocks.SACRAMENTO_GLAZED_TERRACOTTA.get());
+
 		tag(BlockTags.WOOL)
 			.add(ModBlocks.BLURPLE_WOOL.get())
 			.add(ModBlocks.CANARY_WOOL.get())

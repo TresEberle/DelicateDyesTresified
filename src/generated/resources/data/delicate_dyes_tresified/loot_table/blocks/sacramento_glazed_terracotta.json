@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "delicate_dyes_tresified:sacramento_glazed_terracotta"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "delicate_dyes_tresified:blocks/sacramento_glazed_terracotta"
+}
