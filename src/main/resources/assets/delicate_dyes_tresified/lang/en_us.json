@@ -10,6 +10,7 @@
   "block.delicate_dyes_tresified.sacramento_terracotta": "Sacramento Terracotta",
   "block.delicate_dyes_tresified.sacramento_glazed_terracotta": "Sacramento Glazed Terracotta",
   "block.delicate_dyes_tresified.sacramento_stained_glass": "Sacramento Stained Glass",
+  "block.delicate_dyes_tresified.sacramento_stained_glass_pane": "Sacramento Stained Glass Pane",
   "block.delicate_dyes_tresified.sangria_wool": "Sangria Wool",
   "block.delicate_dyes_tresified.sky_wool": "Sky Wool",
   "block.delicate_dyes_tresified.wasabi_wool": "Wasabi Wool",
@@ -18,6 +19,13 @@
 
   "creativetab.delicate_dyes_tresified.delicate_dyes_tresified": "Delicate Dyes",
 
+  "item.delicate_dyes_tresified.blurple_dye": "Blurple Dye",
+  "item.delicate_dyes_tresified.canary_dye": "Canary Dye",
+  "item.delicate_dyes_tresified.coral_dye": "Coral Dye",
+  "item.delicate_dyes_tresified.rose_dye": "Rose Dye",
   "item.delicate_dyes_tresified.sacramento_dye": "Sacramento Dye",
-  "item.delicate_dyes_tresified.canary_dye": "Canary Dye"
+  "item.delicate_dyes_tresified.sangria_dye": "Canary Dye",
+  "item.delicate_dyes_tresified.sky_dye": "Sky Dye",
+  "item.delicate_dyes_tresified.wasabi_dye": "Wasabi Dye"
+
 }

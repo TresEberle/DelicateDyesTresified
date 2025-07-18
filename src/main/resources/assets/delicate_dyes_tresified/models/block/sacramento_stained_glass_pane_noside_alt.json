@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside_alt",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "pane": "delicate_dyes_tresified:block/sacramento_stained_glass"
+  }
+}

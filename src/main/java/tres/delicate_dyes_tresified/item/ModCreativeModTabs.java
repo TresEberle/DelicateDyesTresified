@@ -21,13 +21,16 @@ public class ModCreativeModTabs {
 					.title(Component.translatable("creativetab.delicate_dyes_tresified.delicate_dyes_tresified"))
 					.displayItems((itemDisplayParameters, output) -> {
 						output.accept(ModBlocks.BLURPLE_WOOL);
+						output.accept(ModItems.BLURPLE_DYE);
 
-						output.accept(ModItems.CANARY_DYE);
 						output.accept(ModBlocks.CANARY_WOOL);
+						output.accept(ModItems.CANARY_DYE);
 
 						output.accept(ModBlocks.CORAL_WOOL);
+						output.accept(ModItems.CORAL_DYE);
 
 						output.accept(ModBlocks.ROSE_WOOL);
+						output.accept(ModItems.ROSE_DYE);
 
 						output.accept(ModBlocks.SACRAMENTO_WOOL);
 						output.accept(ModBlocks.SACRAMENTO_CARPET);
@@ -36,15 +39,17 @@ public class ModCreativeModTabs {
 						output.accept(ModBlocks.SACRAMENTO_CONCRETE_POWDER);
 						output.accept(ModBlocks.SACRAMENTO_GLAZED_TERRACOTTA);
 						output.accept(ModBlocks.SACRAMENTO_STAINED_GLASS);
+						output.accept(ModBlocks.SACRAMENTO_STAINED_GLASS_PANE);
 						output.accept(ModItems.SACRAMENTO_DYE);
 
 						output.accept(ModBlocks.SANGRIA_WOOL);
+						output.accept(ModItems.SANGRIA_DYE);
 
 						output.accept(ModBlocks.SKY_WOOL);
+						output.accept(ModItems.SKY_DYE);
 
 						output.accept(ModBlocks.WASABI_WOOL);
-
-
+						output.accept(ModItems.WASABI_DYE);
 
 					}).build());
 

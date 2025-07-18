@@ -2,6 +2,7 @@ package tres.delicate_dyes_tresified;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.DyeColor;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -39,6 +40,11 @@ public class DelicateDyesTresified {
 
 		// Register our mod's ModConfigSpec so that FML can create and load the config file for us
 		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+		System.out.println("=== DyeColor List ===");
+		for (DyeColor color : DyeColor.values()) {
+			System.out.println("Dye: " + color.getName());
+		}
 	}
 
 	private void commonSetup(FMLCommonSetupEvent event) {

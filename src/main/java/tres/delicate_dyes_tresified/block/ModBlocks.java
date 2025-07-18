@@ -33,7 +33,6 @@ public class ModBlocks {
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
 
-
 	public static final DeferredBlock<Block> SACRAMENTO_WOOL = registerBlock("sacramento_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 
@@ -53,7 +52,10 @@ public class ModBlocks {
 			() -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_GLAZED_TERRACOTTA)));
 
 	public static final DeferredBlock<StainedGlassBlock> SACRAMENTO_STAINED_GLASS = registerBlock("sacramento_stained_glass",
-			() -> new StainedGlassBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS )));
+			() -> new StainedGlassBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+
+	public static final DeferredBlock<StainedGlassPaneBlock> SACRAMENTO_STAINED_GLASS_PANE = registerBlock("sacramento_stained_glass_pane",
+			() -> new StainedGlassPaneBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
 
 	public static final DeferredBlock<Block> SANGRIA_WOOL = registerBlock("sangria_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));

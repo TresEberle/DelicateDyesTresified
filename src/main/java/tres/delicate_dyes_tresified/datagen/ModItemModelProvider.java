@@ -17,11 +17,21 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 	@Override
 	protected void registerModels() {
+		basicItem(ModItems.BLURPLE_DYE.get());
 		basicItem(ModItems.CANARY_DYE.get());
+		basicItem(ModItems.CORAL_DYE.get());
+		basicItem(ModItems.ROSE_DYE.get());
 		basicItem(ModItems.SACRAMENTO_DYE.get());
+		basicItem(ModItems.SANGRIA_DYE.get());
+		basicItem(ModItems.SKY_DYE.get());
+		basicItem(ModItems.WASABI_DYE.get());
 
-
+		simpleBlockItem(ModBlocks.SACRAMENTO_CARPET.get());
 		simpleBlockItem(ModBlocks.SACRAMENTO_GLAZED_TERRACOTTA.get());
+		simpleBlockItem(ModBlocks.SACRAMENTO_STAINED_GLASS.get());
+		withExistingParent("sacramento_stained_glass_pane", modLoc("block/sacramento_stained_glass_pane"));
+
+
 
 
 	}
