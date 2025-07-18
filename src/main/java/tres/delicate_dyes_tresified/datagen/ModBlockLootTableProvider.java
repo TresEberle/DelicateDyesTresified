@@ -28,7 +28,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 		dropSelf(ModBlocks.SACRAMENTO_CONCRETE.get());
 		dropSelf(ModBlocks.SACRAMENTO_CONCRETE_POWDER.get());
 		dropSelf(ModBlocks.SACRAMENTO_GLAZED_TERRACOTTA.get());
-		dropSelf(ModBlocks.SACRAMENTO_STAINED_GLASS.get());
+		dropWhenSilkTouch(ModBlocks.SACRAMENTO_STAINED_GLASS.get());
+		dropWhenSilkTouch(ModBlocks.SACRAMENTO_STAINED_GLASS_PANE.get());
 		dropSelf(ModBlocks.SANGRIA_WOOL.get());
 		dropSelf(ModBlocks.SKY_WOOL.get());
 		dropSelf(ModBlocks.WASABI_WOOL.get());

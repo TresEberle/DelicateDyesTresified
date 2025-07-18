@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
+  "group": "carpet",
   "key": {
     "#": {
       "item": "delicate_dyes_tresified:sacramento_wool"

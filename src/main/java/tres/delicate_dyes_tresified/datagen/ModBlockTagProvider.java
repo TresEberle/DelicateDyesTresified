@@ -42,5 +42,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 		tag(BlockTags.WOOL_CARPETS)
 			.add(ModBlocks.SACRAMENTO_CARPET.get());
+
 	}
 }

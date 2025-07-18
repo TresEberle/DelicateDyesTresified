@@ -57,6 +57,9 @@ public class ModBlocks {
 	public static final DeferredBlock<StainedGlassPaneBlock> SACRAMENTO_STAINED_GLASS_PANE = registerBlock("sacramento_stained_glass_pane",
 			() -> new StainedGlassPaneBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
 
+	public static final DeferredBlock<ShulkerBoxBlock> SACRAMENTO_SHULKER_BOX= registerBlock("sacramento_shulker_box",
+			() -> new ShulkerBoxBlock(DyeColor.PURPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.SHULKER_BOX)));
+
 	public static final DeferredBlock<Block> SANGRIA_WOOL = registerBlock("sangria_wool",
 			() -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sound(SoundType.WOOL).ignitedByLava()));
 

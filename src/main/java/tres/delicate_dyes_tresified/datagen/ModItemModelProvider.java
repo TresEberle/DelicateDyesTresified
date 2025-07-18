@@ -28,8 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 		simpleBlockItem(ModBlocks.SACRAMENTO_CARPET.get());
 		simpleBlockItem(ModBlocks.SACRAMENTO_GLAZED_TERRACOTTA.get());
-		simpleBlockItem(ModBlocks.SACRAMENTO_STAINED_GLASS.get());
-		withExistingParent("sacramento_stained_glass_pane", modLoc("block/sacramento_stained_glass_pane"));
+
 
 
 

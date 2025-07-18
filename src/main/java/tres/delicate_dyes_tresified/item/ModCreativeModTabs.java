@@ -40,6 +40,7 @@ public class ModCreativeModTabs {
 						output.accept(ModBlocks.SACRAMENTO_GLAZED_TERRACOTTA);
 						output.accept(ModBlocks.SACRAMENTO_STAINED_GLASS);
 						output.accept(ModBlocks.SACRAMENTO_STAINED_GLASS_PANE);
+						output.accept(ModBlocks.SACRAMENTO_SHULKER_BOX);
 						output.accept(ModItems.SACRAMENTO_DYE);
 
 						output.accept(ModBlocks.SANGRIA_WOOL);

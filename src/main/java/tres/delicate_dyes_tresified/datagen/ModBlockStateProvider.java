@@ -30,9 +30,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				models()
 						.withExistingParent("sacramento_glazed_terracotta", "block/template_glazed_terracotta")
 						.texture("pattern", modLoc("block/sacramento_glazed_terracotta")));
-//		simpleBlock(ModBlocks.SACRAMENTO_STAINED_GLASS.get(),
-//				models().cubeAll("sacramento_stained_glass", modLoc("block/sacramento_stained_glass"))
-//						.renderType("translucent"));
 
 		blocksWithItem(ModBlocks.SANGRIA_WOOL);
 		blocksWithItem(ModBlocks.SKY_WOOL);

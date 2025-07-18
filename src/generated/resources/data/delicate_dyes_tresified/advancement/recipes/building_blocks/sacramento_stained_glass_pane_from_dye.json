@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sacramento_wool": {
+    "has_sacramento_dye": {
       "conditions": {
         "items": [
           {
-            "items": "delicate_dyes_tresified:sacramento_wool"
+            "items": "delicate_dyes_tresified:sacramento_dye"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "delicate_dyes_tresified:sacramento_carpet_from_wool"
+        "recipe": "delicate_dyes_tresified:sacramento_stained_glass_pane_from_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sacramento_wool"
+      "has_sacramento_dye"
     ]
   ],
   "rewards": {
     "recipes": [
-      "delicate_dyes_tresified:sacramento_carpet_from_wool"
+      "delicate_dyes_tresified:sacramento_stained_glass_pane_from_dye"
     ]
   }
 }
