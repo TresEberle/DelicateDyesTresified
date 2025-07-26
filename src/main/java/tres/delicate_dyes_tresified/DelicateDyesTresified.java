@@ -4,6 +4,7 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.item.DyeColor;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -34,16 +35,14 @@ public class DelicateDyesTresified {
 	public static final Logger LOGGER = LogUtils.getLogger();
 	public static final Map<String, Material> BED_MATERIAL_MAP = new HashMap();
 	public static final Map<String, Material> SHULKER_MATERIAL_MAP = new HashMap();
-	//public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES ;
+	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES ;
 
 
 	public DelicateDyesTresified(IEventBus modEventBus, ModContainer modContainer) {
-//		modEventBus.addListener(this::commonSetup);
-//		NeoForge.EVENT_BUS.register(this);
+		modEventBus.addListener(this::commonSetup);
+		NeoForge.EVENT_BUS.register(this);
 		ModCreativeModeTabs.register(modEventBus);
-//		ModItems.register(modEventBus);
-//		ModBlocks.register(modEventBus);
-//		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
 
 		BlockInit.register();
@@ -54,7 +53,11 @@ public class DelicateDyesTresified {
 		EntityInit.ENTITIES.register(modEventBus);
 		BlockEntityInit.BLOCK_ENTITY_TYPES.register(modEventBus);
 		RecipeSerializerInit.RECIPE_SERIALIZERS.register(modEventBus);
-		//ATTACHMENT_TYPES.register(modEventBus);
+		ATTACHMENT_TYPES.register(modEventBus);
+	}
+
+	static {
+		ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.ATTACHMENT_TYPES, "delicate_dyes_tresified");
 	}
 
 	private void commonSetup(FMLCommonSetupEvent event) {

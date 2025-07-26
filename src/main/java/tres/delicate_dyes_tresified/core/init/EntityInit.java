@@ -22,7 +22,7 @@ public class EntityInit {
 
 	public static void register() {
 		for(DyeColorUtil color : DyeColorUtil.dyenamicValues()) {
-			SHEEP_LOOT.put(color.getTranslationKey(), ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath("dyenamics", "entities/sheep/" + color.getTranslationKey())));
+			SHEEP_LOOT.put(color.getTranslationKey(), ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath("delicate_dyes_tresified", "entities/sheep/" + color.getTranslationKey())));
 		}
 
 	}

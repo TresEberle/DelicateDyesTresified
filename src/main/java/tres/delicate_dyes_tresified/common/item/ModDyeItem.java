@@ -8,6 +8,7 @@ import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import tres.delicate_dyes_tresified.common.entity.ModSheep;
 import tres.delicate_dyes_tresified.core.util.DyeColorUtil;
 
 import java.util.Map;
@@ -22,29 +23,29 @@ public class ModDyeItem extends Item {
 		COLOR_DYE_ITEM_MAP.put(dyeColorIn, this);
 	}
 
-//	public InteractionResult interactLivingEntity(ItemStack stack, Player playerIn, LivingEntity target, InteractionHand hand) {
-//		if (target instanceof DyenamicSheep dyenamicSheep) {
-//			if (dyenamicSheep.isAlive() && !dyenamicSheep.isSheared() && dyenamicSheep.getDyenamicColor() != this.dyeColor) {
-//				if (!playerIn.level().isClientSide) {
-//					dyenamicSheep.setColor(this.dyeColor);
-//					stack.shrink(1);
-//				}
-//
-//				return InteractionResult.sidedSuccess(playerIn.level().isClientSide);
-//			}
-//		} else if (target instanceof Sheep sheep) {
-//			if (sheep.isAlive() && !sheep.isSheared() && sheep.getColor().getId() != this.dyeColor.getId()) {
-//				if (!playerIn.level().isClientSide) {
-//					DyenamicSheep.convertToDyenamics(sheep, this.dyeColor);
-//					stack.shrink(1);
-//				}
-//
-//				return InteractionResult.sidedSuccess(playerIn.level().isClientSide);
-//			}
-//		}
-//
-//		return InteractionResult.PASS;
-//	}
+	public InteractionResult interactLivingEntity(ItemStack stack, Player playerIn, LivingEntity target, InteractionHand hand) {
+		if (target instanceof ModSheep dyenamicSheep) {
+			if (dyenamicSheep.isAlive() && !dyenamicSheep.isSheared() && dyenamicSheep.getDyenamicColor() != this.dyeColor) {
+				if (!playerIn.level().isClientSide) {
+					dyenamicSheep.setColor(this.dyeColor);
+					stack.shrink(1);
+				}
+
+				return InteractionResult.sidedSuccess(playerIn.level().isClientSide);
+			}
+		} else if (target instanceof Sheep sheep) {
+			if (sheep.isAlive() && !sheep.isSheared() && sheep.getColor().getId() != this.dyeColor.getId()) {
+				if (!playerIn.level().isClientSide) {
+					ModSheep.convertToDyenamics(sheep, this.dyeColor);
+					stack.shrink(1);
+				}
+
+				return InteractionResult.sidedSuccess(playerIn.level().isClientSide);
+			}
+		}
+
+		return InteractionResult.PASS;
+	}
 
 	public DyeColorUtil getDyeColor() {
 		return this.dyeColor;

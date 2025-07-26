@@ -11,14 +11,12 @@ import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -39,7 +37,7 @@ public class LootDataProvider implements DataProvider {
 	private final CompletableFuture<HolderLookup.Provider> registries;
 
 	public LootDataProvider(PackOutput output, List<LootTableProvider.SubProviderEntry> providers, CompletableFuture<HolderLookup.Provider> registries) {
-		this.pathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK, "loot_tables");
+		this.pathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK, "loot_table");
 		this.subProviders = providers;
 		this.registries = registries;
 	}
