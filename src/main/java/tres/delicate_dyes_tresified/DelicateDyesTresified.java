@@ -39,10 +39,10 @@ public class DelicateDyesTresified {
 
 
 	public DelicateDyesTresified(IEventBus modEventBus, ModContainer modContainer) {
-		modEventBus.addListener(this::commonSetup);
-		NeoForge.EVENT_BUS.register(this);
+//		modEventBus.addListener(this::commonSetup);
+//		NeoForge.EVENT_BUS.register(this);
 		ModCreativeModeTabs.register(modEventBus);
-		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+//		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
 
 		BlockInit.register();
@@ -58,21 +58,5 @@ public class DelicateDyesTresified {
 
 	static {
 		ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.ATTACHMENT_TYPES, "delicate_dyes_tresified");
-	}
-
-	private void commonSetup(FMLCommonSetupEvent event) {
-
-	}
-
-	// Add the example block item to the building blocks tab
-	private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
-	}
-
-	// You can use SubscribeEvent and let the Event Bus discover methods to call
-	@SubscribeEvent
-	public void onServerStarting(ServerStartingEvent event) {
-		// Do something when the server starts
-		LOGGER.info("HELLO from server starting");
 	}
 }

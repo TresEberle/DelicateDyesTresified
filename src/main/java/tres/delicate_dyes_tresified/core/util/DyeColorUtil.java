@@ -131,6 +131,11 @@ public enum DyeColorUtil implements StringRepresentable {
 		return (DyeColorUtil[])Arrays.copyOfRange(colors, 16, colors.length);
 	}
 
+	public static DyeColorUtil[] vanillaValues() {
+		DyeColorUtil[] colors = values();
+		return (DyeColorUtil[])Arrays.copyOfRange(colors, 0, 15);
+	}
+
 	public static DyeColorUtil byId(int colorId) {
 		if (colorId < 0 || colorId >= VALUES.length) {
 			colorId = 0;

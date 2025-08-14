@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("wool")).get());
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("carpet")).get());
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("terracotta")).get());
+								output.accept((ItemLike) ((DeferredHolder) blocks.get("terracotta_slab")).get());
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("concrete")).get());
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("concrete_powder")).get());
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("glazed_terracotta")).get());
@@ -41,6 +42,10 @@ public class ModCreativeModeTabs {
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("candle")).get());
 								output.accept((ItemLike) ((DeferredHolder) blocks.get("banner")).get());
 							}
+						for(net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+							Map<String, DeferredHolder<Block, Block>> blocks = (Map) BlockInit.VANILLA_EXTENSIONS.get(color.getSerializedName());
+							output.accept((ItemLike) ((DeferredHolder) blocks.get("terracotta_slab")).get());
+						}
 						ItemInit.DYE_ITEMS.forEach((s, registryObject) -> output.accept((ItemLike)registryObject.get()));
 					}).build());
 

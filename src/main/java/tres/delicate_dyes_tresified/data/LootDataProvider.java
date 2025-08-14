@@ -100,8 +100,12 @@ public class LootDataProvider implements DataProvider {
 				this.dropWhenSilkTouch((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("stained_glass")).get());
 				this.dropWhenSilkTouch((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("stained_glass_pane")).get());
 				this.dropSelf((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("terracotta")).get());
+				this.dropSelf((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("terracotta_slab")).get());
 				this.dropOtherBanner((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("wall_banner")).get(), (Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("banner")).get());
 				this.dropSelf((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("wool")).get());
+			}
+			for (net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+				this.dropSelf((Block)((DeferredHolder)((Map)BlockInit.VANILLA_EXTENSIONS.get(color.getSerializedName())).get("terracotta_slab")).get());
 			}
 		}
 

@@ -22,7 +22,7 @@ public class BlockTagProvider extends BlockTagsProvider {
 
 	protected void addTags(HolderLookup.Provider provider) {
 		for(DyeColorUtil color : DyeColorUtil.dyenamicValues()) {
-			this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(new Block[]{(Block)((DeferredHolder)((Map) BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("terracotta")).get(), (Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("glazed_terracotta")).get(), (Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("concrete")).get()});
+			this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(new Block[]{(Block)((DeferredHolder)((Map) BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("terracotta")).get(), (Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("terracotta_slab")).get(), (Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("glazed_terracotta")).get(), (Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("concrete")).get()});
 			this.tag(BlockTags.MINEABLE_WITH_SHOVEL).add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("concrete_powder")).get());
 			this.tag(BlockTags.BANNERS).add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("banner")).get());
 			this.tag(BlockTags.BEDS).add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("bed")).get());
@@ -38,7 +38,10 @@ public class BlockTagProvider extends BlockTagsProvider {
 			this.tag(BlockTags.create(ResourceLocation.parse("c:glass/" + color.getSerializedName()))).add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("stained_glass")).get());
 			this.tag(BlockTags.create(ResourceLocation.parse("c:glass_panes/" + color.getSerializedName()))).add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("stained_glass_pane")).get());
 		}
+		for(net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+			this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(new Block[]{(Block)((DeferredHolder)((Map)BlockInit.VANILLA_EXTENSIONS.get(color.getSerializedName())).get("terracotta_slab")).get()});
 
+		}
 	}
 
 	public String getName() {

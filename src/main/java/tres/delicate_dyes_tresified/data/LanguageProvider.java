@@ -28,6 +28,7 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("wool")).get(), colorName + " Wool");
 			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("carpet")).get(), colorName + " Carpet");
 			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("terracotta")).get(), colorName + " Terracotta");
+			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("terracotta_slab")).get(), colorName + " Terracotta Slab");
 			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("glazed_terracotta")).get(), colorName + " Glazed Terracotta");
 			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("concrete")).get(), colorName + " Concrete");
 			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("concrete_powder")).get(), colorName + " Concrete Powder");
@@ -35,7 +36,10 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 			this.add((Block)((DeferredHolder)((Map)BlockInit.DYED_BLOCKS.get(color.getSerializedName())).get("stained_glass_pane")).get(), colorName + " Stained Glass Pane");
 			this.add((Item)((DeferredHolder) ItemInit.DYE_ITEMS.get(color.getSerializedName() + "_dye")).get(), colorName + " Dye");
 		}
-
+		for(net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+			String colorName = this.capName(color.getSerializedName());
+			this.add((Block)((DeferredHolder)((Map)BlockInit.VANILLA_EXTENSIONS.get(color.getSerializedName())).get("terracotta_slab")).get(), colorName + " Terracotta Slab");
+		}
 	}
 
 	public String getName() {

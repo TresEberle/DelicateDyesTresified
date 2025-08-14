@@ -14,6 +14,16 @@ group = mod_group_id
 
 repositories {
     mavenCentral()
+//    maven {
+//        // location of the maven that hosts JEI files since January 2023
+//        name = "Jared's maven"
+//        url = "https://maven.blamejared.com/"
+//    }
+//    maven {
+//        // location of a maven mirror for JEI files, as a fallback
+//        name = "ModMaven"
+//        url = "https://modmaven.dev"
+//    }
 }
 
 base {
@@ -73,17 +83,20 @@ configurations {
     runtimeClasspath.extendsFrom localRuntime
 }
 
-dependencies {
-    implementation 'org.spongepowered:mixin:0.8.5'
-}
+//dependencies {
+//    // compile against the JEI API but do not include it at runtime
+//    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+//    // at runtime, use the full JEI jar for NeoForge
+//    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+//}
 
-jar {
-    manifest {
-        attributes([
-                "MixinConfigs": "delicate_dyes_tresified.mixins.json"
-        ])
-    }
-}
+//jar {
+//    manifest {
+//        attributes([
+//                "MixinConfigs": "delicate_dyes_tresified.mixins.json"
+//        ])
+//    }
+//}
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [

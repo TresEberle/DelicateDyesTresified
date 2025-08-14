@@ -2,6 +2,7 @@ package tres.delicate_dyes_tresified.core.init;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -26,10 +27,14 @@ import java.util.function.Supplier;
 public class BlockInit {
 	public static final DeferredRegister<Block> BLOCKS;
 	public static final Map<String, Map<String, DeferredHolder<Block, Block>>> DYED_BLOCKS;
+	public static final Map<String, Map<String, DeferredHolder<Block, Block>>> VANILLA_EXTENSIONS = new HashMap<>();
 
 	public static void register() {
 		for(DyeColorUtil color : DyeColorUtil.dyenamicValues()) {
 			registerDyeBlocks(color);
+		}
+		for(net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+			registerVanillaDyeBlocks(color);
 		}
 
 	}
@@ -43,6 +48,7 @@ public class BlockInit {
 		DYED_BLOCKS.put(colorName, blocks);
 
 		registerBlockAndItem(colorName, "terracotta", blocks, BlockItem::new, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA).mapColor(mapColor).lightLevel((state) -> light)));
+		registerBlockAndItem(colorName, "terracotta_slab", blocks, BlockItem::new, () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA).mapColor(mapColor).lightLevel((state) -> light)));
 		registerBlockAndItem(colorName, "glazed_terracotta", blocks, BlockItem::new, () -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_GLAZED_TERRACOTTA).mapColor(analogue).lightLevel((state) -> light)));
 		DeferredHolder<Block, Block> concrete = registerBlockAndItem(colorName, "concrete", blocks, BlockItem::new, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE).mapColor(analogue).lightLevel((state) -> light)));
 		registerBlockAndItem(colorName, "concrete_powder", blocks, BlockItem::new, () -> new ConcretePowderBlock((Block)concrete.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE_POWDER).mapColor(analogue).lightLevel((state) -> light)));
@@ -59,6 +65,31 @@ public class BlockInit {
 		registerShulkerBoxAndItem(colorName, "shulker_box", blocks, ModShulkerBlockItem::new, () -> new ModShulkerBoxBlock(color, BlockBehaviour.Properties.ofFullCopy(Blocks.SHULKER_BOX).lightLevel((state) -> light).mapColor(mapColor)));
 		DeferredHolder<Block, Block> wallBanner = registerBlockAndItem(colorName, "wall_banner", blocks, (BlockItemSupplier)null, () -> new ModWallBannerBlock(color, BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_BANNER).lightLevel((state) -> light)));
 		registerBannerBlockAndItem(colorName, "banner", blocks, () -> new ModBannerBlock(color, BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_BANNER).lightLevel((state) -> light)), wallBanner);
+	}
+
+	public static synchronized void registerVanillaDyeBlocks(DyeColor color) {
+		// Get the lowercase name of the color (e.g., "white", "orange")
+		String colorName = color.getName();
+
+		// Create a new map for the vanilla color's blocks
+		Map<String, DeferredHolder<Block, Block>> blocks = new HashMap<>();
+		VANILLA_EXTENSIONS.put(colorName, blocks);
+
+		// Build the resource location for the colored terracotta block
+		// This correctly gets the specific block instance from the game's registry
+		ResourceLocation terracottaId = ResourceLocation.fromNamespaceAndPath("minecraft", colorName + "_terracotta");
+		Block vanillaTerracotta = BuiltInRegistries.BLOCK.get(terracottaId);
+
+		// A fallback check in case the block doesn't exist for some reason
+		if (vanillaTerracotta == null) {
+			System.err.println("Could not find vanilla terracotta block for color: " + colorName);
+			return;
+		}
+
+		// Register the slab block for the vanilla terracotta
+		registerBlockAndItem(colorName, "terracotta_slab", blocks, BlockItem::new,
+				() -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(vanillaTerracotta)));
+
 	}
 
 	public static synchronized DeferredHolder<Block, Block> registerBedAndItem(String color, String nameSuffix, Map<String, DeferredHolder<Block, Block>> blockMap, BlockItemSupplier<?> itemSupplier, Supplier<Block> supplier) {
